@@ -18,8 +18,6 @@ class MonstersViewController: UIViewController {
         monstersTableView.register(UINib(nibName: "MonsterCell", bundle: nil), forCellReuseIdentifier: "MonsterCell")
 
     }
-
-
 }
 
 extension MonstersViewController: UITableViewDataSource, UITableViewDelegate {

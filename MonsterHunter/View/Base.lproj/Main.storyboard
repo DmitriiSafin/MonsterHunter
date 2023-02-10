@@ -42,16 +42,28 @@
                                     <segue destination="oIb-kj-gbu" kind="show" id="DBh-75-rM0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJ2-sg-tzo">
+                                <rect key="frame" x="157" y="427" width="100" height="42"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Поймать"/>
+                                <connections>
+                                    <segue destination="HPH-Qr-5X1" kind="show" id="D65-d0-570"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ubt-5R-HB0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="08O-6a-H6F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ubt-5R-HB0" secondAttribute="bottom" constant="30" id="3iY-2b-DZ3"/>
+                            <constraint firstItem="sJ2-sg-tzo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H43-6g-5lh"/>
                             <constraint firstItem="POW-Pc-cAm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="guA-gG-KOE"/>
                             <constraint firstItem="POW-Pc-cAm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hQT-bJ-Njr"/>
                             <constraint firstAttribute="bottom" secondItem="POW-Pc-cAm" secondAttribute="bottom" id="jIe-vJ-G9H"/>
                             <constraint firstItem="POW-Pc-cAm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="l0O-TU-J29"/>
+                            <constraint firstItem="sJ2-sg-tzo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="per-L6-z8I"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Hxz-yh-5oW">
@@ -64,6 +76,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="950.72463768115949" y="-28.125"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="aUf-lC-SoX">
+            <objects>
+                <viewController id="HPH-Qr-5X1" customClass="CameraViewController" customModule="MonsterHunter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ryx-lK-Fws">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="UEW-Zn-M5r"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="f0s-fE-WXe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zsy-6s-0Kl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950.72463768115949" y="675"/>
         </scene>
         <!--Моя команда-->
         <scene sceneID="izk-Fc-yy8">
@@ -171,6 +199,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

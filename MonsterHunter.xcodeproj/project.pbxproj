@@ -13,6 +13,7 @@
 		2842FA37298FACFD0042235F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2842FA35298FACFD0042235F /* Main.storyboard */; };
 		2842FA39298FACFE0042235F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2842FA38298FACFE0042235F /* Assets.xcassets */; };
 		2842FA3C298FACFE0042235F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2842FA3A298FACFE0042235F /* LaunchScreen.storyboard */; };
+		285EF1C52994D2A60084AC30 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285EF1C42994D2A60084AC30 /* CameraViewController.swift */; };
 		287837632992242B001BDBF6 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287837622992242B001BDBF6 /* Monster.swift */; };
 		2878376529922481001BDBF6 /* MonstersBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2878376429922481001BDBF6 /* MonstersBrain.swift */; };
 		2878376729923180001BDBF6 /* MonsterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2878376629923180001BDBF6 /* MonsterCell.xib */; };
@@ -29,6 +30,7 @@
 		2842FA38298FACFE0042235F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2842FA3B298FACFE0042235F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2842FA3D298FACFE0042235F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		285EF1C42994D2A60084AC30 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		287837622992242B001BDBF6 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		2878376429922481001BDBF6 /* MonstersBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonstersBrain.swift; sourceTree = "<group>"; };
 		2878376629923180001BDBF6 /* MonsterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonsterCell.xib; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				2842FA33298FACFD0042235F /* ViewController.swift */,
 				28901E88299218A80054BC9B /* MonstersViewController.swift */,
+				285EF1C42994D2A60084AC30 /* CameraViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				2842FA34298FACFD0042235F /* ViewController.swift in Sources */,
 				28901E89299218A80054BC9B /* MonstersViewController.swift in Sources */,
 				2842FA30298FACFD0042235F /* AppDelegate.swift in Sources */,
+				285EF1C52994D2A60084AC30 /* CameraViewController.swift in Sources */,
 				2842FA32298FACFD0042235F /* SceneDelegate.swift in Sources */,
 				28783769299232B9001BDBF6 /* MonsterCell.swift in Sources */,
 			);
