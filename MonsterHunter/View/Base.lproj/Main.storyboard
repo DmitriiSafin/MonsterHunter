@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,10 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POW-Pc-cAm">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSR-gV-l9W" customClass="YMKMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <standardMapConfiguration key="preferredConfiguration"/>
-                            </mapView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubt-5R-HB0">
                                 <rect key="frame" x="57" y="772" width="300" height="60"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
@@ -58,11 +57,11 @@
                         <constraints>
                             <constraint firstItem="ubt-5R-HB0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="08O-6a-H6F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ubt-5R-HB0" secondAttribute="bottom" constant="30" id="3iY-2b-DZ3"/>
+                            <constraint firstItem="NSR-gV-l9W" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="G8x-EF-AZo"/>
                             <constraint firstItem="sJ2-sg-tzo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H43-6g-5lh"/>
-                            <constraint firstItem="POW-Pc-cAm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="guA-gG-KOE"/>
-                            <constraint firstItem="POW-Pc-cAm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hQT-bJ-Njr"/>
-                            <constraint firstAttribute="bottom" secondItem="POW-Pc-cAm" secondAttribute="bottom" id="jIe-vJ-G9H"/>
-                            <constraint firstItem="POW-Pc-cAm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="l0O-TU-J29"/>
+                            <constraint firstItem="NSR-gV-l9W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LVJ-BN-XVs"/>
+                            <constraint firstAttribute="bottom" secondItem="NSR-gV-l9W" secondAttribute="bottom" id="b0B-oz-BLD"/>
+                            <constraint firstItem="NSR-gV-l9W" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="f8v-CV-WOX"/>
                             <constraint firstItem="sJ2-sg-tzo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="per-L6-z8I"/>
                         </constraints>
                     </view>
@@ -70,7 +69,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="fEM-0Q-Spt"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="mapView" destination="POW-Pc-cAm" id="Ydu-oP-WU2"/>
+                        <outlet property="mapView" destination="NSR-gV-l9W" id="ebe-oE-dbs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
