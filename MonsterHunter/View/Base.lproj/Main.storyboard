@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,10 +18,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POW-Pc-cAm">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNc-ya-fbv" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <standardMapConfiguration key="preferredConfiguration"/>
-                            </mapView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="wPm-18-aav">
+                                <rect key="frame" x="336" y="397" width="40" height="102"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6K-sa-sb7">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ky6-ie-Tdh"/>
+                                            <constraint firstAttribute="width" constant="40" id="x1I-vC-aF4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnZoomIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="thz-2Y-6hZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4t-D8-NMz">
+                                        <rect key="frame" x="0.0" y="62" width="40" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Do3-2Q-9en"/>
+                                            <constraint firstAttribute="width" constant="40" id="lvT-0E-UMY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="-">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnZoomOut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jhr-qb-vy1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubt-5R-HB0">
                                 <rect key="frame" x="57" y="772" width="300" height="60"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
@@ -42,35 +78,25 @@
                                     <segue destination="oIb-kj-gbu" kind="show" id="DBh-75-rM0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJ2-sg-tzo">
-                                <rect key="frame" x="157" y="427" width="100" height="42"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Поймать"/>
-                                <connections>
-                                    <segue destination="HPH-Qr-5X1" kind="show" id="D65-d0-570"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ubt-5R-HB0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="08O-6a-H6F"/>
+                            <constraint firstItem="lNc-ya-fbv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0Df-NL-QtP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ubt-5R-HB0" secondAttribute="bottom" constant="30" id="3iY-2b-DZ3"/>
-                            <constraint firstItem="sJ2-sg-tzo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H43-6g-5lh"/>
-                            <constraint firstItem="POW-Pc-cAm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="guA-gG-KOE"/>
-                            <constraint firstItem="POW-Pc-cAm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hQT-bJ-Njr"/>
-                            <constraint firstAttribute="bottom" secondItem="POW-Pc-cAm" secondAttribute="bottom" id="jIe-vJ-G9H"/>
-                            <constraint firstItem="POW-Pc-cAm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="l0O-TU-J29"/>
-                            <constraint firstItem="sJ2-sg-tzo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="per-L6-z8I"/>
+                            <constraint firstAttribute="bottom" secondItem="lNc-ya-fbv" secondAttribute="bottom" id="9jA-Y2-zbY"/>
+                            <constraint firstItem="wPm-18-aav" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BzJ-PO-EdP"/>
+                            <constraint firstItem="lNc-ya-fbv" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Pd5-Yl-slF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wPm-18-aav" secondAttribute="trailing" constant="38" id="XlU-Nz-G1b"/>
+                            <constraint firstItem="lNc-ya-fbv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="tAf-sW-JGu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Hxz-yh-5oW">
                         <barButtonItem key="backBarButtonItem" title=" " id="fEM-0Q-Spt"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="mapView" destination="POW-Pc-cAm" id="Ydu-oP-WU2"/>
+                        <outlet property="mapView" destination="lNc-ya-fbv" id="ebR-x2-RRW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -80,7 +106,7 @@
         <!--Camera View Controller-->
         <scene sceneID="aUf-lC-SoX">
             <objects>
-                <viewController id="HPH-Qr-5X1" customClass="CameraViewController" customModule="MonsterHunter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CameraViewController" id="HPH-Qr-5X1" customClass="CameraViewController" customModule="MonsterHunter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ryx-lK-Fws">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,8 +226,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

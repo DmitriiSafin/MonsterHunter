@@ -7,10 +7,14 @@
 
 import UIKit
 
-struct Monster {
-    let image: UIImage
+struct Monster: Codable {
     let name: String
     let level: String
+    
+    lazy var currentImage: UIImage = {
+        let image = UIImage(named: name)
+        return image ?? UIImage()
+    }()
 }
 
 

@@ -19,9 +19,13 @@
 		2878376729923180001BDBF6 /* MonsterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2878376629923180001BDBF6 /* MonsterCell.xib */; };
 		28783769299232B9001BDBF6 /* MonsterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28783768299232B9001BDBF6 /* MonsterCell.swift */; };
 		28901E89299218A80054BC9B /* MonstersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28901E88299218A80054BC9B /* MonstersViewController.swift */; };
+		28B8913D299BD35200FB7A2B /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 28B8913C299BD35200FB7A2B /* music.mp3 */; };
+		F0E8DBF5881952F38862E082 /* Pods_MonsterHunter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FE70BA09FFBB71BC2184E6D /* Pods_MonsterHunter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D7BF8129D55A83B820C2FC8 /* Pods-MonsterHunter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonsterHunter.release.xcconfig"; path = "Target Support Files/Pods-MonsterHunter/Pods-MonsterHunter.release.xcconfig"; sourceTree = "<group>"; };
+		20E0DF7AB41797236E6848E9 /* Pods-MonsterHunter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonsterHunter.debug.xcconfig"; path = "Target Support Files/Pods-MonsterHunter/Pods-MonsterHunter.debug.xcconfig"; sourceTree = "<group>"; };
 		2842FA2C298FACFD0042235F /* MonsterHunter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonsterHunter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2842FA2F298FACFD0042235F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2842FA31298FACFD0042235F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +40,8 @@
 		2878376629923180001BDBF6 /* MonsterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonsterCell.xib; sourceTree = "<group>"; };
 		28783768299232B9001BDBF6 /* MonsterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterCell.swift; sourceTree = "<group>"; };
 		28901E88299218A80054BC9B /* MonstersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonstersViewController.swift; sourceTree = "<group>"; };
+		28B8913C299BD35200FB7A2B /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		7FE70BA09FFBB71BC2184E6D /* Pods_MonsterHunter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MonsterHunter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0E8DBF5881952F38862E082 /* Pods_MonsterHunter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +61,8 @@
 			children = (
 				2842FA2E298FACFD0042235F /* MonsterHunter */,
 				2842FA2D298FACFD0042235F /* Products */,
+				310AA5E6FAC3FC90022F95BA /* Pods */,
+				E00270C3F5AFC53E9D5D3F4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +83,7 @@
 				2878376B29923537001BDBF6 /* View */,
 				2878376D29923556001BDBF6 /* Controllers */,
 				2842FA38298FACFE0042235F /* Assets.xcassets */,
+				28B8913C299BD35200FB7A2B /* music.mp3 */,
 				2842FA3D298FACFE0042235F /* Info.plist */,
 			);
 			path = MonsterHunter;
@@ -117,6 +127,23 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		310AA5E6FAC3FC90022F95BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20E0DF7AB41797236E6848E9 /* Pods-MonsterHunter.debug.xcconfig */,
+				1D7BF8129D55A83B820C2FC8 /* Pods-MonsterHunter.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E00270C3F5AFC53E9D5D3F4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FE70BA09FFBB71BC2184E6D /* Pods_MonsterHunter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2842FA40298FACFE0042235F /* Build configuration list for PBXNativeTarget "MonsterHunter" */;
 			buildPhases = (
+				3890C74A1F075883A8225B23 /* [CP] Check Pods Manifest.lock */,
 				2842FA28298FACFD0042235F /* Sources */,
 				2842FA29298FACFD0042235F /* Frameworks */,
 				2842FA2A298FACFD0042235F /* Resources */,
+				5A0731F625892D4B0910EE14 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -175,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28B8913D299BD35200FB7A2B /* music.mp3 in Resources */,
 				2878376729923180001BDBF6 /* MonsterCell.xib in Resources */,
 				2842FA3C298FACFE0042235F /* LaunchScreen.storyboard in Resources */,
 				2842FA39298FACFE0042235F /* Assets.xcassets in Resources */,
@@ -183,6 +213,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3890C74A1F075883A8225B23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MonsterHunter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A0731F625892D4B0910EE14 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MonsterHunter/Pods-MonsterHunter-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MonsterHunter/Pods-MonsterHunter-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MonsterHunter/Pods-MonsterHunter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2842FA28298FACFD0042235F /* Sources */ = {
@@ -338,6 +410,7 @@
 		};
 		2842FA41298FACFE0042235F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20E0DF7AB41797236E6848E9 /* Pods-MonsterHunter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -370,6 +443,7 @@
 		};
 		2842FA42298FACFE0042235F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D7BF8129D55A83B820C2FC8 /* Pods-MonsterHunter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

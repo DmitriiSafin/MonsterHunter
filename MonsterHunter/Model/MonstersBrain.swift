@@ -7,18 +7,45 @@
 
 import UIKit
 
-struct MonstersBrain {
+class MonstersBrain {
     
-    let monsters = [
-        Monster(image: UIImage(named: "Grizl") ?? UIImage(), name: "Grizl", level: "Уровень 1"),
-        Monster(image: UIImage(named: "Serp") ?? UIImage(), name: "Serp", level: "Уровень 1"),
-        Monster(image: UIImage(named: "Morder") ?? UIImage(), name: "Morder", level: "Уровень 1"),
-        Monster(image: UIImage(named: "Slept") ?? UIImage(), name: "Slept", level: "Уровень 1"),
-        Monster(image: UIImage(named: "Hipe") ?? UIImage(), name: "Hipe", level: "Уровень 1"),
-        Monster(image: UIImage(named: "Crown") ?? UIImage(), name: "Crown", level: "Уровень 1"),
-        Monster(image: UIImage(named: "Pitun") ?? UIImage(), name: "Pitun", level: "Уровень 1"),
-        Monster(image: UIImage(named: "Dino") ?? UIImage(), name: "Dino", level: "Уровень 1"),
-        Monster(image: UIImage(named: "Ridon") ?? UIImage(), name: "Ridon", level: "Уровень 1"),
-        Monster(image: UIImage(named: "Spot") ?? UIImage(), name: "Spot", level: "Уровень 1"),
-    ]
+    static let shared = MonstersBrain()
+    
+    let defaults = UserDefaults.standard
+    
+    var monsters: [Monster] {
+        get {
+            if let data = defaults.value(forKey: "monsters") as? Data {
+                return try! PropertyListDecoder().decode([Monster].self, from: data)
+            } else {
+                return [Monster]()
+            }
+        }
+        set {
+            if let data = try? PropertyListEncoder().encode(newValue) {
+                defaults.set(data, forKey: "monsters")
+            }
+        }
+    }
+    
+    let namesMonsters = ["Grizl", "Serp", "Morder", "Slept", "Hipe", "Crown", "Pitun", "Dino", "Ridon", "Spot"]
+    
+    func getMonsters() -> [String] {
+        var arrayMonsters: [String] = []
+        for _ in 1...30 {
+            arrayMonsters.append(namesMonsters.randomElement()!)
+        }
+        return arrayMonsters
+    }
+    
+    func saveMonsters(name: String, level: String) {
+        
+        let monster = Monster(name: name, level: level)
+        monsters.insert(monster, at: 0)
+    }
+    
+    func levelMonster() -> String {
+        return "\(Int.random(in: 5...20))"
+    }
+    
 }
