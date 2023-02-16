@@ -23,19 +23,19 @@ class CameraViewController: UIViewController {
         return button
     }()
     
-    let monsterView: UIImageView = {
+    lazy var monsterView: UIImageView = {
         let imageView = UIImageView()
-        let image = UIImage(named: "Pitun")
+        let image = UIImage(named: "\(nameMonster!)")
         imageView.image = image
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleToFill
         return imageView
     }()
     
-    let nameLabel: UILabel = {
+    lazy var nameLabel: UILabel = {
         let label = UILabel()
-        var textForLabel = NSMutableAttributedString(string: "Name \n", attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)])
-        textForLabel.append(NSMutableAttributedString(string: "Level 1", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15)]))
+        var textForLabel = NSMutableAttributedString(string: "\(nameMonster!) \n", attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)])
+        textForLabel.append(NSMutableAttributedString(string: "Level \(levelMonster)", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15)]))
         label.attributedText = textForLabel
         label.numberOfLines = 0
         label.layer.masksToBounds = true
@@ -47,10 +47,10 @@ class CameraViewController: UIViewController {
         return label
     }()
     
-    let catchLabel: UILabel = {
+    lazy var catchLabel: UILabel = {
         let label = UILabel()
         var textForLabel = NSMutableAttributedString(string: "Ура! \n", attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)])
-        textForLabel.append(NSMutableAttributedString(string: "Вы поймали монстра Name\n в свою команду!", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15)]))
+        textForLabel.append(NSMutableAttributedString(string: "Вы поймали монстра \(nameMonster!)\n в свою команду!", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15)]))
         label.attributedText = textForLabel
         label.numberOfLines = 0
         label.layer.masksToBounds = true
@@ -63,7 +63,7 @@ class CameraViewController: UIViewController {
         return label
     }()
     
-    let attemptLabel: UILabel = {
+    lazy var attemptLabel: UILabel = {
         let label = UILabel()
         var textForLabel = NSMutableAttributedString(string: "Не вышло:( \n", attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18)])
         textForLabel.append(NSMutableAttributedString(string: "Попробуйте поймать еще раз!", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 15)]))
@@ -94,6 +94,9 @@ class CameraViewController: UIViewController {
         label.isHidden = true
         return label
     }()
+    
+    var nameMonster: String!
+    var levelMonster = MonstersBrain.shared.levelMonster()
     
     var video = AVCaptureVideoPreviewLayer()
     // настройка сессии
@@ -147,10 +150,11 @@ class CameraViewController: UIViewController {
     @objc func catchMonster() {
         
         if catchButton.currentTitle == "Перейти к карте" {
-            _ = navigationController?.popViewController(animated: true)
+            navigationController?.popToRootViewController(animated: true)
         } else {
             let percentCapture = [1, 2, 3, 4, 5].randomElement()
             if percentCapture == 1 {
+                MonstersBrain.shared.saveMonsters(name: nameMonster, level: levelMonster)
                 catchLabel.isHidden = false
                 loseLabel.isHidden = true
                 attemptLabel.isHidden = true
@@ -176,6 +180,7 @@ class CameraViewController: UIViewController {
     
 }
 
+//MARK: - Animation
 extension CameraViewController {
     
     func animationMonster() {
@@ -201,6 +206,7 @@ extension CameraViewController {
     }
 }
 
+//MARK: - Constraints
 extension CameraViewController {
     
     func setConstraints() {
