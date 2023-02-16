@@ -13,11 +13,11 @@ class ViewController: UIViewController {
         
     @IBOutlet weak var mapView: GMSMapView!
     
-    var locationManager = CLLocationManager()
-    var monsters = MonstersBrain.shared.getMonsters()
-    var currentLocation = CLLocation()
-    var player: AVAudioPlayer!
-    var zoom: Float = 15
+    private var locationManager = CLLocationManager()
+    private var monsters = MonstersBrain.shared.getMonsters()
+    private var currentLocation = CLLocation()
+    private var player: AVAudioPlayer!
+    private var zoom: Float = 15
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +27,7 @@ class ViewController: UIViewController {
         //}
         setupManager()
         mapView.delegate = self
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3) {
-            self.mapView.camera = GMSCameraPosition(target: self.currentLocation.coordinate, zoom: self.zoom, bearing: 0, viewingAngle: 0)
-            self.addMonstersOnMap()
-        }
+
         Timer.scheduledTimer(withTimeInterval: 300, repeats: true) { _ in
             self.upateMonstersOnMap()
         }
@@ -46,7 +43,7 @@ class ViewController: UIViewController {
         mapView.animate(toZoom: zoom)
     }
     
-    func addMonstersOnMap() {
+    private func addMonstersOnMap() {
         for i in self.monsters {
             let position = CLLocationCoordinate2D(
                 latitude: self.currentLocation.coordinate.latitude + Double.random(in: -0.01...0.01),
@@ -58,20 +55,20 @@ class ViewController: UIViewController {
         }
     }
     
-    func upateMonstersOnMap() {
+    private func upateMonstersOnMap() {
         monsters = MonstersBrain.shared.getMonsters()
         mapView.clear()
         addMonstersOnMap()
     }
     
-    func setupManager() {
+    private func setupManager() {
         locationManager.delegate = self
         mapView.settings.myLocationButton = true
         mapView.padding = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 20)
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
-    func playSound() {
+    private func playSound() {
         guard let url = Bundle.main.url(forResource: "music", withExtension: "mp3") else { return }
         
         player = try! AVAudioPlayer(contentsOf: url)
@@ -135,6 +132,11 @@ extension ViewController {
         case .authorizedWhenInUse:
             mapView.isMyLocationEnabled = true
             locationManager.startUpdatingLocation()
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3) {
+                self.mapView.camera = GMSCameraPosition(target: self.currentLocation.coordinate, zoom: self.zoom, bearing: 0, viewingAngle: 0)
+                self.addMonstersOnMap()
+            }
+            
         case .denied:
             let alert = UIAlertController(title: "Вы запретили использование местоположения", message: "Хотите разрешить?", preferredStyle: .alert)
             let settingsAction = UIAlertAction(title: "Настройки", style: .default) { alert in
@@ -159,6 +161,7 @@ extension ViewController {
         if CLLocationManager.locationServicesEnabled() {
             setupManager()
             checkAutorization()
+            
         } else {
             let alert = UIAlertController(title: "У вас выключена служба геолокации", message: "Хотите включить?", preferredStyle: .alert)
             let settingsAction = UIAlertAction(title: "Настройки", style: .default) { alert in

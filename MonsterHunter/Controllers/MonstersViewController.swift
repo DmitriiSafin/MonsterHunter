@@ -14,7 +14,6 @@ class MonstersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         monstersTableView.register(UINib(nibName: "MonsterCell", bundle: nil), forCellReuseIdentifier: "MonsterCell")
-
     }
 }
 
