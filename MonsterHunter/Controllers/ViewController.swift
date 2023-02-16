@@ -161,7 +161,6 @@ extension ViewController {
         if CLLocationManager.locationServicesEnabled() {
             setupManager()
             checkAutorization()
-            
         } else {
             let alert = UIAlertController(title: "У вас выключена служба геолокации", message: "Хотите включить?", preferredStyle: .alert)
             let settingsAction = UIAlertAction(title: "Настройки", style: .default) { alert in
