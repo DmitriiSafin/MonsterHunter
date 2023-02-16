@@ -27,7 +27,8 @@ class ViewController: UIViewController {
         //}
         setupManager()
         mapView.delegate = self
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3) {
+            self.mapView.camera = GMSCameraPosition(target: self.currentLocation.coordinate, zoom: self.zoom, bearing: 0, viewingAngle: 0)
             self.addMonstersOnMap()
         }
         Timer.scheduledTimer(withTimeInterval: 300, repeats: true) { _ in
@@ -49,7 +50,7 @@ class ViewController: UIViewController {
         for i in self.monsters {
             let position = CLLocationCoordinate2D(
                 latitude: self.currentLocation.coordinate.latitude + Double.random(in: -0.01...0.01),
-                longitude: self.currentLocation.coordinate.longitude + Double.random(in: -0.014...0.014))
+                longitude: self.currentLocation.coordinate.longitude + Double.random(in: -0.012...0.012))
             let marker = GMSMarker(position: position)
             marker.icon = UIImage(named: i)
             marker.title = i
@@ -84,8 +85,6 @@ extension ViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {
-            mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
-            locationManager.stopUpdatingLocation()
             currentLocation = location
         }
     }
