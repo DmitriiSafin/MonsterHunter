@@ -155,6 +155,7 @@ class CameraViewController: UIViewController {
             let percentCapture = [1, 2, 3, 4, 5].randomElement()
             if percentCapture == 1 {
                 MonstersBrain.shared.saveMonsters(name: nameMonster, level: levelMonster)
+                nameLabel.isHidden = true
                 catchLabel.isHidden = false
                 loseLabel.isHidden = true
                 attemptLabel.isHidden = true
@@ -163,6 +164,7 @@ class CameraViewController: UIViewController {
             } else {
                 let percentEscape = [1, 2, 3].randomElement()
                 if percentEscape == 1 {
+                    nameLabel.isHidden = true
                     loseLabel.isHidden = false
                     catchLabel.isHidden = true
                     attemptLabel.isHidden = true
@@ -176,8 +178,6 @@ class CameraViewController: UIViewController {
             }
         }
     }
-    
-    
 }
 
 //MARK: - Animation

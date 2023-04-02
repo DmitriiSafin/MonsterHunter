@@ -103,7 +103,7 @@ extension ViewController: GMSMapViewDelegate {
         
         let distanceInMeters = coordinate0.distance(from: coordinate1)
 
-        if distanceInMeters <= 100 {
+        if distanceInMeters <= 500 {
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             let nextVC = storyBoard.instantiateViewController(withIdentifier: "CameraViewController") as! CameraViewController
             nextVC.nameMonster = marker.title

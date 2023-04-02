@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2835B63029D94F460038B2FC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2835B62F29D94F460038B2FC /* README.md */; };
+		2835B63229D94FA70038B2FC /* Screen1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2835B63129D94FA70038B2FC /* Screen1.png */; };
+		2835B63429D94FAD0038B2FC /* Screen2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2835B63329D94FAD0038B2FC /* Screen2.png */; };
 		2842FA30298FACFD0042235F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842FA2F298FACFD0042235F /* AppDelegate.swift */; };
 		2842FA32298FACFD0042235F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842FA31298FACFD0042235F /* SceneDelegate.swift */; };
 		2842FA34298FACFD0042235F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842FA33298FACFD0042235F /* ViewController.swift */; };
@@ -26,6 +29,9 @@
 /* Begin PBXFileReference section */
 		1D7BF8129D55A83B820C2FC8 /* Pods-MonsterHunter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonsterHunter.release.xcconfig"; path = "Target Support Files/Pods-MonsterHunter/Pods-MonsterHunter.release.xcconfig"; sourceTree = "<group>"; };
 		20E0DF7AB41797236E6848E9 /* Pods-MonsterHunter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonsterHunter.debug.xcconfig"; path = "Target Support Files/Pods-MonsterHunter/Pods-MonsterHunter.debug.xcconfig"; sourceTree = "<group>"; };
+		2835B62F29D94F460038B2FC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2835B63129D94FA70038B2FC /* Screen1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen1.png; sourceTree = "<group>"; };
+		2835B63329D94FAD0038B2FC /* Screen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screen2.png; sourceTree = "<group>"; };
 		2842FA2C298FACFD0042235F /* MonsterHunter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonsterHunter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2842FA2F298FACFD0042235F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2842FA31298FACFD0042235F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,9 +62,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2835B62E29D94F370038B2FC /* ReadmeResources */ = {
+			isa = PBXGroup;
+			children = (
+				2835B63129D94FA70038B2FC /* Screen1.png */,
+				2835B63329D94FAD0038B2FC /* Screen2.png */,
+			);
+			path = ReadmeResources;
+			sourceTree = "<group>";
+		};
 		2842FA23298FACFD0042235F = {
 			isa = PBXGroup;
 			children = (
+				2835B62F29D94F460038B2FC /* README.md */,
+				2835B62E29D94F370038B2FC /* ReadmeResources */,
 				2842FA2E298FACFD0042235F /* MonsterHunter */,
 				2842FA2D298FACFD0042235F /* Products */,
 				310AA5E6FAC3FC90022F95BA /* Pods */,
@@ -204,10 +221,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2835B63429D94FAD0038B2FC /* Screen2.png in Resources */,
+				2835B63029D94F460038B2FC /* README.md in Resources */,
 				28B8913D299BD35200FB7A2B /* music.mp3 in Resources */,
 				2878376729923180001BDBF6 /* MonsterCell.xib in Resources */,
 				2842FA3C298FACFE0042235F /* LaunchScreen.storyboard in Resources */,
 				2842FA39298FACFE0042235F /* Assets.xcassets in Resources */,
+				2835B63229D94FA70038B2FC /* Screen1.png in Resources */,
 				2842FA37298FACFD0042235F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
