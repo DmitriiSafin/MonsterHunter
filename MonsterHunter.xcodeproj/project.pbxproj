@@ -21,6 +21,7 @@
 		2878376529922481001BDBF6 /* MonstersBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2878376429922481001BDBF6 /* MonstersBrain.swift */; };
 		2878376729923180001BDBF6 /* MonsterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2878376629923180001BDBF6 /* MonsterCell.xib */; };
 		28783769299232B9001BDBF6 /* MonsterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28783768299232B9001BDBF6 /* MonsterCell.swift */; };
+		288BD2392A2B59D7006724B7 /* RPReplay_Final1676631781.gif in Resources */ = {isa = PBXBuildFile; fileRef = 288BD2382A2B59D7006724B7 /* RPReplay_Final1676631781.gif */; };
 		28901E89299218A80054BC9B /* MonstersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28901E88299218A80054BC9B /* MonstersViewController.swift */; };
 		28B8913D299BD35200FB7A2B /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 28B8913C299BD35200FB7A2B /* music.mp3 */; };
 		F0E8DBF5881952F38862E082 /* Pods_MonsterHunter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FE70BA09FFBB71BC2184E6D /* Pods_MonsterHunter.framework */; };
@@ -45,6 +46,7 @@
 		2878376429922481001BDBF6 /* MonstersBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonstersBrain.swift; sourceTree = "<group>"; };
 		2878376629923180001BDBF6 /* MonsterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonsterCell.xib; sourceTree = "<group>"; };
 		28783768299232B9001BDBF6 /* MonsterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterCell.swift; sourceTree = "<group>"; };
+		288BD2382A2B59D7006724B7 /* RPReplay_Final1676631781.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = RPReplay_Final1676631781.gif; sourceTree = "<group>"; };
 		28901E88299218A80054BC9B /* MonstersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonstersViewController.swift; sourceTree = "<group>"; };
 		28B8913C299BD35200FB7A2B /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		7FE70BA09FFBB71BC2184E6D /* Pods_MonsterHunter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MonsterHunter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 			children = (
 				2835B63129D94FA70038B2FC /* Screen1.png */,
 				2835B63329D94FAD0038B2FC /* Screen2.png */,
+				288BD2382A2B59D7006724B7 /* RPReplay_Final1676631781.gif */,
 			);
 			path = ReadmeResources;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			files = (
 				2835B63429D94FAD0038B2FC /* Screen2.png in Resources */,
 				2835B63029D94F460038B2FC /* README.md in Resources */,
+				288BD2392A2B59D7006724B7 /* RPReplay_Final1676631781.gif in Resources */,
 				28B8913D299BD35200FB7A2B /* music.mp3 in Resources */,
 				2878376729923180001BDBF6 /* MonsterCell.xib in Resources */,
 				2842FA3C298FACFE0042235F /* LaunchScreen.storyboard in Resources */,
