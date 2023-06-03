@@ -12,4 +12,6 @@
 
 >*Catch them all! There are a lot of monsters! Save the world!!!*
 
+<img src="https://github.com/DmitriiSafin/MonsterHunter/blob/main/ReadmeResources/RPReplay_Final1676631781.gif" width="300">
+
 ### Google maps are used
